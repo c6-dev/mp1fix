@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5528b17e-8bc1-4ae4-9e5a-dc4e88d264a3}</ProjectGuid>
-    <RootNamespace>dsound</RootNamespace>
+    <ProjectGuid>{84247814-5B19-4A00-8F68-6D295D145C21}</ProjectGuid>
+    <RootNamespace>dinput</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -82,7 +88,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ModuleDefinitionFile>dsound.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>dinput.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(TargetPath)" "C:\Games\Steam\steamapps\common\FlatOut Ultimate Carnage"</Command>
@@ -104,7 +110,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ModuleDefinitionFile>dsound.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>dinput.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(TargetPath)" "C:\Games\Steam\steamapps\common\FlatOut Ultimate Carnage"</Command>
@@ -139,19 +145,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="..\code\SafeWrite.cpp" />
+    <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsound.def" />
+    <None Include="dinput.def" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\code\calls.h" />
-    <ClInclude Include="dsound.h" />
     <ClInclude Include="..\code\Logging.h" />
     <ClInclude Include="..\code\patches.h" />
     <ClInclude Include="..\code\SafeWrite.h" />
     <ClInclude Include="..\code\types.h" />
+    <ClInclude Include="dinput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

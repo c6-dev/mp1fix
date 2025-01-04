@@ -15,35 +15,35 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="..\code\SafeWrite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\SafeWrite.cpp">
+    <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsound.def">
+    <None Include="dinput.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="dsound.h">
+    <ClInclude Include="..\code\calls.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\code\Logging.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\types.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\code\calls.h">
+    <ClInclude Include="..\code\patches.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\code\SafeWrite.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\patches.h">
+    <ClInclude Include="..\code\types.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dinput.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
