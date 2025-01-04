@@ -9,6 +9,7 @@ Before and after the patch, when `-nodialog` is used and AA set to 8:
 
 Supports latest Steam release only.  
 
-To install, unpack `dsound.dll` into the game folder. Alternatively, If you want to use another mod that replaces this dll, you can unpack `dinput.dll` instead.  
+To install, unpack `dsound.dll` into the game folder.  
+Alternatively, If you want to use another mod that replaces this dll, you can unpack `dinput.dll` instead.  
 
 Same problem is present in Max Payne 2 - fix available [here](https://github.com/c6-dev/mp2fix/).
